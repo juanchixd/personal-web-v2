@@ -1,7 +1,9 @@
 ---
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
-import ProjectDashboard from '../components/ProjectDashboard.jsx'; // Asegúrate que la ruta sea correcta
+import ProjectDashboard from '../components/ProjectDashboard.jsx';
+import Analytics from '@vercel/analytics/astro';
+import  SpeedInsights  from "@vercel/speed-insights/astro";
 ---
 
 <Layout title="Juan Gonzalez | Ingeniería & Código">
@@ -115,7 +117,7 @@ import ProjectDashboard from '../components/ProjectDashboard.jsx'; // Asegúrate
 		</div>
 	</section>
 
-	{/* 4. SKILLS: */}
+	{/* 4. SKILLS */}
 	<section id="habilidades" class="py-20 border-t border-gray-800/50">
 		<h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
 			<span class="text-mate-green">02.</span> Caja de Herramientas
@@ -200,7 +202,7 @@ import ProjectDashboard from '../components/ProjectDashboard.jsx'; // Asegúrate
 		</div>
 	</section>
 
-	{/* 5. TRAYECTORIA: Tu historia (Cierra el perfil y genera confianza) */}
+	{/* 5. TRAYECTORIA */}
 	<section id="trayectoria" class="py-20">
 		<h2 class="text-3xl md:text-4xl font-bold text-white mb-12 flex items-center gap-3">
 			<span class="text-copper">03.</span> Trayectoria
@@ -260,7 +262,7 @@ import ProjectDashboard from '../components/ProjectDashboard.jsx'; // Asegúrate
 		</div>
 	</section>
 
-	{/* 6. CONTACTO: Cierre */}
+	{/* 6. CONTACTO */}
 	<section id="contacto" class="py-20 text-center">
 		<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">¿Tenés un proyecto en mente?</h2>
 		<p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
