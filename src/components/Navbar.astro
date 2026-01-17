@@ -1,0 +1,44 @@
+---
+const links = [
+  { name: "Inicio", href: "/#" },
+  { name: "Proyectos", href: "/#proyectos" },
+  { name: "Habilidades", href: "/#habilidades" },
+  { name: "Trayectoria", href: "/#trayectoria" },
+];
+---
+
+<nav class="fixed top-0 left-0 w-full z-50 bg-tech-bg/80 backdrop-blur-md border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <a href="/" class="text-xl font-bold font-mono tracking-tighter hover:text-mate-green transition-colors">
+        JG<span class="text-copper">.dev</span>
+      </a>
+
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-8">
+          {links.map((link) => (
+            <a
+              href={link.href}
+              class="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all font-mono"
+            >
+              {link.name}
+            </a>
+          ))}
+          <a href="#contacto" class="bg-mate-green text-black px-4 py-2 rounded font-bold text-sm hover:bg-white transition-colors">
+            Contáctame
+          </a>
+        </div>
+      </div>
+
+      <div class="-mr-2 flex md:hidden">
+        <button type="button" class="text-gray-400 hover:text-white p-2">
+          <span class="sr-only">Abrir menú</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,43 +1,76 @@
-# Astro Starter Kit: Minimal
+<div align="center">
+  <br />
+  <h1>Juan Gonzalez | Portfolio v2.0</h1>
+  <h3>Ingeniería Electrónica + Desarrollo de Software</h3>
+  <p>
+    <em>"Conectando el mundo físico con el digital."</em>
+  </p>
 
-```sh
-npm create astro@latest -- --template minimal
-```
+  <p>
+    <a href="https://astro.build"><img src="https://img.shields.io/badge/Astro-5.0-FF5D01?style=for-the-badge&logo=astro&logoColor=white" alt="Astro"></a>
+    <a href="https://react.dev"><img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"></a>
+    <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind"></a>
+    <a href="https://vercel.com"><img src="https://img.shields.io/badge/Vercel-Deploy-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"></a>
+  </p>
+</div>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<hr />
 
-## 🚀 Project Structure
+## ⚡ Sobre el Proyecto
 
-Inside of your Astro project, you'll see the following folders and files:
+Este repositorio contiene el código fuente de mi portafolio personal y profesional. El objetivo de este rediseño fue crear una plataforma que refleje mi perfil híbrido: **Técnico Mecánico-Electricista** y **Desarrollador**.
 
-```text
+La web está construida con un enfoque de alto rendimiento, estética industrial (Dark Mode) y arquitectura basada en componentes.
+
+### 🎨 Concepto de Diseño "Hybrid Engineering"
+
+Se utilizó una paleta de colores semántica para diferenciar mis dos áreas de experticia:
+
+- **Cobre (`#b87333`):** Representa el Hardware, la electrónica, los cables y la ingeniería.
+- **Verde Mate (`#00ff9d`):** Representa el Software, la terminal, el código y, por supuesto, mi combustible diario: el mate 🧉.
+
+## 🛠 Stack Tecnológico
+
+La arquitectura está pensada para ser rápida (SEO friendly) pero interactiva donde se necesita.
+
+- **Core:** [Astro 5.0](https://astro.build/) (Arquitectura de Islas).
+- **Estilos:** Tailwind CSS con configuración de tema personalizada.
+- **Interactividad:** React (para el Dashboard de proyectos y componentes de estado).
+- **Fuentes:** Inter (UI) y Fira Code (Bloques de código/técnicos).
+- **Deploy:** Vercel Edge Network.
+
+## 📂 Estructura del Proyecto
+
+```bash
 /
-├── public/
+├── public/           # Assets estáticos (imágenes, iconos)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/   # Componentes
+│   ├── data/         # Datos centralizados (proyectos.js)
+│   ├── layouts/      # Plantilla base (Layout.astro)
+│   └── pages/        # Rutas y páginas (index.astro, /proyecto/[id])
+└── astro.config.mjs  # Configuración de integraciones
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🚀 Despliegue
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+El sitio está desplegado en Vercel y se actualiza automáticamente con cada push al repositorio.
 
-Any static assets, like images, can be placed in the `public/` directory.
+- **URL:** [https://juangonzalez.com.ar](https://juangonzalez.com.ar)
 
-## 🧞 Commands
+## 📫 Contacto
 
-All commands are run from the root of the project, from a terminal:
+Para consultas profesionales o colaboraciones, no dudes en contactarme:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Email:**
+  -    <a href="mailto:contacto@juangonzalez.com.ar" class="bg-mate-green text-black font-bold px-8 py-4 rounded-lg hover:bg-white transition-all text-lg shadow-lg shadow-mate-green/20">
+         Enviame un Email
+       </a>
+- **LinkedIn:**
+  -    <a href="https://linkedin.com/in/juanbautistagonzalez" target="_blank" class="border border-gray-600 text-white font-bold px-8 py-4 rounded-lg hover:border-copper hover:text-copper transition-all text-lg">
+         LinkedIn
+       </a>
 
-## 👀 Want to learn more?
+## 📄 Licencia
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.

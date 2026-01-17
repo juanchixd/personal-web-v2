@@ -1,16 +1,279 @@
 ---
-
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import ProjectDashboard from '../components/ProjectDashboard.jsx'; // Asegúrate que la ruta sea correcta
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Juan Gonzalez | Ingeniería & Código">
+	
+	{/* 1. HERO SECTION */}
+	<section class="min-h-screen flex flex-col justify-center py-20 relative">
+		
+		<div class="absolute top-20 right-0 w-72 h-72 bg-mate-green rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+
+		<div class="space-y-6 max-w-3xl z-10">
+		
+			<span class="font-mono text-mate-green bg-mate-green/10 px-3 py-1 rounded text-sm border border-mate-green/20">
+				&lt;Hello World /&gt;
+			</span>
+
+			<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white">
+				Conectando el mundo <span class="text-copper">físico</span> con el <span class="text-mate-green">digital</span>.
+			</h1>
+
+			<p class="text-xl text-gray-400 leading-relaxed max-w-2xl">
+				Soy <strong class="text-white">Juan Gonzalez</strong>. Técnico Mecánico-Electricista y Desarrollador. 
+				Estudiante de Ingeniería Electrónica. 
+				Creo herramientas, automatizo procesos y construyo soluciones a medida, siempre con un mate en la mano.
+			</p>
+
+			<div class="flex flex-wrap gap-4 pt-4">
+				<a href="#proyectos" class="bg-mate-green text-black font-bold px-6 py-3 rounded hover:bg-white transition-colors flex items-center gap-2">
+					Ver Proyectos
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+					</svg>
+				</a>
+				
+				<a href="https://github.com/juanchixd" target="_blank" rel="noopener noreferrer" class="border border-gray-600 text-white px-6 py-3 rounded font-mono hover:border-copper hover:text-copper transition-colors">
+					github.com/juanchixd
+				</a>
+			</div>
+		</div>
+
+		<div class="hidden md:block absolute right-0 bottom-20 font-mono text-xs text-gray-600 opacity-50 select-none">
+			<p>SYSTEM STATUS: ONLINE</p>
+			<p>CAFFEINE LEVEL: 85%</p>
+			<p>TEMP: 36°C</p>
+			<p>LAST DEPLOY: TODAY</p>
+		</div>
+
+	</section>
+
+	{/* 2. PROYECTOS */}
+	<section id="proyectos" class="py-20">
+		<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+			<div>
+				<h2 class="text-3xl md:text-4xl font-bold text-white mb-2">
+					<span class="text-copper">01.</span> Laboratorio & Código
+				</h2>
+				<p class="text-gray-400 max-w-xl">
+					Una selección de mis trabajos realizados. Desde un sistema ERP, hasta proyectos de monitorización.
+				</p>
+			</div>
+			
+			<div class="hidden md:block h-px w-32 bg-gradient-to-r from-mate-green to-transparent"></div>
+		</div>
+
+		<ProjectDashboard client:visible />
+	</section>
+
+	{/* 3. SERVICIOS */}
+	<section id="servicios" class="py-20 bg-white/5 rounded-3xl my-10 px-8 border border-white/5 relative overflow-hidden">
+		
+		<div class="absolute top-0 right-0 w-64 h-64 bg-copper/5 rounded-full blur-[80px] pointer-events-none"></div>
+
+		<div class="text-center mb-16">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿En qué puedo ayudarte?</h2>
+			<p class="text-gray-400 max-w-2xl mx-auto">
+				Combino la lógica de la ingeniería con la flexibilidad del desarrollo web para crear soluciones robustas.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			
+			<div class="bg-tech-bg p-8 rounded-xl border border-gray-800 hover:border-mate-green/50 transition-colors group">
+				<div class="w-12 h-12 bg-mate-green/10 rounded-lg flex items-center justify-center text-mate-green mb-6 group-hover:scale-110 transition-transform">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+				</div>
+				<h3 class="text-xl font-bold text-white mb-3">Desarrollo Web Full Stack</h3>
+				<p class="text-gray-400 text-sm leading-relaxed">
+					Creación de aplicaciones web a medida, sistemas de gestión (ERP) y dashboards interactivos usando React, Python y bases de datos SQL.
+				</p>
+			</div>
+
+			<div class="bg-tech-bg p-8 rounded-xl border border-gray-800 hover:border-copper/50 transition-colors group">
+				<div class="w-12 h-12 bg-copper/10 rounded-lg flex items-center justify-center text-copper mb-6 group-hover:scale-110 transition-transform">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
+				</div>
+				<h3 class="text-xl font-bold text-white mb-3">Soluciones IoT & Embebidos</h3>
+				<p class="text-gray-400 text-sm leading-relaxed">
+					Diseño de firmware para ESP32/Arduino, automatización de sensores y control de hardware a través de interfaces web.
+				</p>
+			</div>
+
+			<div class="bg-tech-bg p-8 rounded-xl border border-gray-800 hover:border-white/50 transition-colors group">
+				<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+				</div>
+				<h3 class="text-xl font-bold text-white mb-3">Infraestructura & Home Lab</h3>
+				<p class="text-gray-400 text-sm leading-relaxed">
+					Configuración de servidores Linux, virtualización con Proxmox, contenedores Docker y redes seguras.
+				</p>
+			</div>
+
+		</div>
+	</section>
+
+	{/* 4. SKILLS: */}
+	<section id="habilidades" class="py-20 border-t border-gray-800/50">
+		<h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+			<span class="text-mate-green">02.</span> Caja de Herramientas
+		</h2>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+			
+			<div class="space-y-6">
+				<div class="flex items-center gap-3 mb-6">
+					<div class="p-2 bg-copper/10 rounded-lg border border-copper/20 text-copper">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+					</div>
+					<h3 class="text-2xl font-bold text-white">Ingeniería & Hardware</h3>
+				</div>
+
+				<div class="bg-tech-surface p-6 rounded-xl border border-gray-800 relative overflow-hidden group hover:border-copper/30 transition-colors">
+					<div class="absolute -right-4 -top-4 w-24 h-24 bg-copper/5 rounded-full blur-2xl group-hover:bg-copper/10 transition-all"></div>
+					
+					<ul class="space-y-4 relative z-10 font-mono text-sm text-gray-300">
+						<li class="flex justify-between border-b border-gray-800 pb-2">
+							<span>Microcontroladores</span>
+							<span class="text-copper">ESP32, ESP8266, FDRM-KL43, Arduino</span>
+						</li>
+						<li class="flex justify-between border-b border-gray-800 pb-2">
+							<span>Diseño CAD/3D</span>
+							<span class="text-copper">AutoCAD</span>
+						</li>
+						<li class="flex justify-between border-b border-gray-800 pb-2">
+							<span>Instrumentación</span>
+							<span class="text-copper">Osciloscopio, Multimetro, Generador de señales</span>
+						</li>
+						<li class="flex justify-between border-b border-gray-800 pb-2">
+							<span>Automatización</span>
+							<span class="text-copper">PLCs, Lógica de relés, Sensores</span>
+						</li>
+						<li class="flex justify-between pt-2">
+							<span>Circuitos</span>
+							<span class="text-copper">Diseño PCB (KiCad/Proteus)</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="space-y-6">
+				<div class="flex items-center gap-3 mb-6">
+					<div class="p-2 bg-mate-green/10 rounded-lg border border-mate-green/20 text-mate-green">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+					</div>
+					<h3 class="text-2xl font-bold text-white">Desarrollo & Software</h3>
+				</div>
+
+				<div class="bg-tech-surface p-6 rounded-xl border border-gray-800 relative overflow-hidden group hover:border-mate-green/30 transition-colors">
+					<div class="absolute -right-4 -top-4 w-24 h-24 bg-mate-green/5 rounded-full blur-2xl group-hover:bg-mate-green/10 transition-all"></div>
+
+					<div class="font-mono text-sm">
+						<div class="mb-4">
+							<span class="text-gray-500">juanchi@dev:~$</span> <span class="text-mate-green">ls ./lenguajes</span>
+							<div class="mt-2 flex flex-wrap gap-2">
+								<span class="px-2 py-1 bg-black/40 rounded text-gray-300 border border-gray-700">JavaScript</span>
+								<span class="px-2 py-1 bg-black/40 rounded text-gray-300 border border-gray-700">Python</span>
+								<span class="px-2 py-1 bg-black/40 rounded text-gray-300 border border-gray-700">C/C++</span>
+								<span class="px-2 py-1 bg-black/40 rounded text-gray-300 border border-gray-700">SQL</span>
+							</div>
+						</div>
+						
+						<div class="mb-4">
+							<span class="text-gray-500">juanchi@dev:~$</span> <span class="text-mate-green">ls ./frameworks</span>
+							<div class="mt-2 flex flex-wrap gap-2">
+								<span class="px-2 py-1 bg-black/40 rounded text-gray-300 border border-gray-700">React</span>
+								<span class="px-2 py-1 bg-black/40 rounded text-gray-300 border border-gray-700">Astro</span>
+								<span class="px-2 py-1 bg-black/40 rounded text-gray-300 border border-gray-700">Node.js</span>
+								<span class="px-2 py-1 bg-black/40 rounded text-gray-300 border border-gray-700">Tailwind</span>
+							</div>
+						</div>
+
+						<div>
+							<span class="text-gray-500">juanchi@dev:~$</span> <span class="text-mate-green animate-pulse">_</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{/* 5. TRAYECTORIA: Tu historia (Cierra el perfil y genera confianza) */}
+	<section id="trayectoria" class="py-20">
+		<h2 class="text-3xl md:text-4xl font-bold text-white mb-12 flex items-center gap-3">
+			<span class="text-copper">03.</span> Trayectoria
+			<div class="h-px bg-gray-800 flex-grow ml-4"></div>
+		</h2>
+
+		<div class="relative border-l-2 border-gray-800 ml-4 md:ml-10 space-y-12">
+			
+			<div class="relative pl-8 md:pl-12">
+				<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-mate-green shadow-[0_0_10px_#00ff9d]"></div>
+				
+				<span class="font-mono text-mate-green text-sm mb-1 block">2020 - Presente</span>
+				<h3 class="text-xl font-bold text-white">Desarrollo de Software & Soluciones (Autodidacta)</h3>
+				<p class="text-gray-400 mt-2 max-w-2xl">
+					Formación continua impulsada por la curiosidad y la necesidad de resolver problemas reales. 
+					Desde scripts en Python para automatizar tareas hasta el desarrollo de sistemas completos (ERP) para gestión comercial, aprendiendo tecnologías como React, Docker y Linux sobre la marcha.
+				</p>
+			</div>
+
+			<div class="relative pl-8 md:pl-12">
+				<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-600 border-2 border-tech-bg"></div>
+				
+				<span class="font-mono text-gray-500 text-sm mb-1 block">Nov 2024 - Dic 2025</span>
+				<h3 class="text-xl font-bold text-white">Ventas Técnicas Corporativas</h3>
+				<h4 class="text-md text-copper">Electricidad Serra SRL</h4>
+				<p class="text-gray-400 mt-2 max-w-2xl">
+					Atención y asesoramiento técnico a grandes empresas. Gestión de cuentas y soluciones en materiales eléctricos industriales. Manejo de SAP, Exiros y plataformas B2B.
+				</p>
+			</div>
+
+			<div class="relative pl-8 md:pl-12">
+				<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-600 border-2 border-tech-bg"></div>
+				
+				<span class="font-mono text-gray-500 text-sm mb-1 block">2018 - Presente</span>
+				<h3 class="text-xl font-bold text-white">Estudiante de Ingeniería Electrónica</h3>
+				<h4 class="text-md text-copper">F.C.E.I.A. - Universidad Nacional de Rosario (UNR)</h4>
+				<p class="text-gray-400 mt-2 max-w-2xl">
+					Formación académica con foco en sistemas digitales y analógicos.
+				</p>
+				<div class="mt-3 inline-block bg-white/5 border border-gray-700 rounded-lg p-3">
+					<span class="text-white font-bold text-sm block mb-1">★ Ayudante de 2da - Informática</span>
+					<span class="text-gray-500 text-xs">(Abr 2024 - Jul 2024) Colaboración docente y apoyo a alumnos.</span>
+				</div>
+			</div>
+
+			<div class="relative pl-8 md:pl-12">
+				<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-copper border-2 border-tech-bg"></div>
+				
+				<span class="font-mono text-gray-500 text-sm mb-1 block">2011 - 2017</span>
+				<h3 class="text-xl font-bold text-white">Técnico Mecánico Electricista</h3>
+				<h4 class="text-md text-copper">Escuela Técnica N°57 Fray Luis Beltran</h4>
+				<p class="text-gray-400 mt-2 max-w-2xl">
+					Base técnica. Aprendizaje de procesos de mecanizado (torno, fresa), herrería e instalaciones eléctricas industriales y domiciliarias.
+				</p>
+			</div>
+
+		</div>
+	</section>
+
+	{/* 6. CONTACTO: Cierre */}
+	<section id="contacto" class="py-20 text-center">
+		<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">¿Tenés un proyecto en mente?</h2>
+		<p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+			Estoy siempre abierto a discutir nuevas ideas, desarrollos a medida o simplemente charlar sobre tecnología y mates.
+		</p>
+		
+		<div class="flex flex-col sm:flex-row justify-center gap-4">
+			<a href="mailto:contacto@juangonzalez.com.ar" class="bg-mate-green text-black font-bold px-8 py-4 rounded-lg hover:bg-white transition-all text-lg shadow-lg shadow-mate-green/20">
+				Enviame un Email
+			</a>
+			<a href="https://linkedin.com/in/juanbautistagonzalez" target="_blank" class="border border-gray-600 text-white font-bold px-8 py-4 rounded-lg hover:border-copper hover:text-copper transition-all text-lg">
+				LinkedIn
+			</a>
+		</div>
+	</section>
+</Layout>

@@ -1,0 +1,51 @@
+---
+// src/layouts/Layout.astro
+import '@fontsource/inter';
+import '@fontsource/fira-code';
+import { ClientRouter } from 'astro:transitions';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Juan González - Técnico Mecánico & Desarrollador" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+        <ClientRouter />
+	</head>
+	<body class="bg-tech-bg text-gray-300 font-sans antialiased selection:bg-mate-green selection:text-black">
+		<div class="fixed inset-0 z-[-1] bg-[size:40px_40px] bg-grid-pattern opacity-[0.15] pointer-events-none"></div>
+		<Navbar />
+		<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<slot />
+		</main>
+        <Footer />
+	</body>
+</html>
+
+<style is:global>
+	/* Scrollbar estilo terminal */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background: #0a0a0a;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #333;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #b87333; /* Cobre al hacer hover */
+	}
+</style>

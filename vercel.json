@@ -1,0 +1,99 @@
+{
+    "redirects": [
+        {
+            "source": "/wpp",
+            "destination": "https://wa.me/+5493454087690",
+            "permanent": true
+        },
+        {
+            "source": "/drive",
+            "destination": "https://drive.google.com/drive/folders/1FYUe2-QsNmf1yBmEc3aUTy_iAMUdkx5W",
+            "permanent": true
+        },
+        {
+            "source": "/github",
+            "destination": "https://github.com/juanchixd",
+            "permanent": true
+        },
+        {
+            "source": "/c4",
+            "destination": "https://drive.google.com/drive/folders/1-J8rCTCpMmMG-uAyeuLte9VpKag2uuDg",
+            "permanent": true
+        },
+        {
+            "source": "/c3",
+            "destination": "https://drive.google.com/drive/folders/1w2VkIMFPBd3Jk2Dms72-lrtpO4R4LbHC",
+            "permanent": true
+        },
+        {
+            "source": "/em",
+            "destination": "https://drive.google.com/drive/folders/17B3P8JGncB76lqLNZSv2bDZGv74fyhSi",
+            "permanent": true
+        },
+        {
+            "source": "/f1",
+            "destination": "https://drive.google.com/drive/folders/1-87IJ4HCMV6h6ZVsIR32o9w59JSwcTil",
+            "permanent": true
+        },
+        {
+            "source": "/f3",
+            "destination": "https://drive.google.com/drive/folders/1655yWkaeNN6FCab9ZCo1Wyf3aFNJllMI",
+            "permanent": true
+        },
+        {
+            "source": "/f2",
+            "destination": "https://drive.google.com/drive/folders/1ANxkUFpvy6_mipm2O79MgYUW4DAEO_2I",
+            "permanent": true
+        },
+        {
+            "source": "/fisde",
+            "destination": "https://drive.google.com/drive/folders/1XqWfRzDA0UKOfMBIhnTh203XU7VxVH28",
+            "permanent": true
+        },
+        {
+            "source": "/ma",
+            "destination": "https://drive.google.com/drive/folders/148e_ner0p_5kjOU_rp_hFSQdxpzQn5hC",
+            "permanent": true
+        },
+        {
+            "source": "/pye",
+            "destination": "https://drive.google.com/drive/folders/15wrRnBLSuDqUQ8IckxkYaVwJr0qnVF9M",
+            "permanent": true
+        },
+        {
+            "source": "/q",
+            "destination": "https://drive.google.com/drive/folders/15w5pfsG1QTrKp2rGxyYi1ljQ4BUBiA7H",
+            "permanent": true
+        },
+        {
+            "source": "/sys1",
+            "destination": "https://drive.google.com/drive/folders/1Sflns4w4IK9O0reHPg7Sl7X8J4dKmXf8",
+            "permanent": true
+        },
+        {
+            "source": "/tci",
+            "destination": "https://drive.google.com/drive/folders/1_f3YcNejbQCMYS6mpv5djY6YlBHP4PEI",
+            "permanent": true
+        },
+        {
+            "source": "/infoapli",
+            "destination": "https://drive.google.com/drive/folders/1OnFawi7-rk-y-Yk2kckMKoHxV-kf39v-",
+            "permanent": true
+        },
+        {
+            "source": "/lepiniat",
+            "destination": "https://mega.nz/folder/cPg1SIhY#mp24oUVNmljh8heVTc37mA",
+            "permanent": true
+        },
+        {
+            "source": "/libros",
+            "destination": "https://drive.google.com/drive/folders/1IwZqxemJODWIVpUFehQsiTDElGf5wiJd?usp=sharing",
+            "permanent": true
+        },
+        {
+            "source": "/ane",
+            "destination": "https://drive.google.com/drive/folders/1gSCaVfmBdGdicFox7T4oqP0wYfYUGEBC?usp=drive_link",
+            "permanent": true
+        }
+    ]
+}
