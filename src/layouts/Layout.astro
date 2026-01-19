@@ -5,6 +5,8 @@ import '@fontsource/fira-code';
 import { ClientRouter } from 'astro:transitions';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
+import EasterEgg from '../components/EasterEgg.jsx';
+
 interface Props {
 	title: string;
 }
@@ -24,6 +26,7 @@ const { title } = Astro.props;
         <ClientRouter />
 	</head>
 	<body class="bg-tech-bg text-gray-300 font-sans antialiased selection:bg-mate-green selection:text-black">
+		<EasterEgg client:idle/>
 		<div class="fixed inset-0 z-[-1] bg-[size:40px_40px] bg-grid-pattern opacity-[0.15] pointer-events-none"></div>
 		<Navbar />
 		<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
