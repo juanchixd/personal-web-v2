@@ -6,6 +6,8 @@ import { ClientRouter } from 'astro:transitions';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import EasterEgg from '../components/EasterEgg.jsx';
+import Analytics from '@vercel/analytics/astro';
+import  SpeedInsights  from "@vercel/speed-insights/astro";
 
 interface Props {
 	title: string;
@@ -18,14 +20,28 @@ const { title } = Astro.props;
 <html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Juan González - Técnico Mecánico & Desarrollador" />
+		<meta name="description" content="Juan Gonzalez - Técnico mecánico electricista, desarrollador y estudiante de Ingeniería Electrónica." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
         <ClientRouter />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://juangonzalez.com.ar/" />
+		<meta property="og:title" content="Juan Gonzalez | Ingeniería & Código" />
+		<meta property="og:description" content="Portafolio Profesional. Técnico mecánico electricista, desarrollador y estudiante de Ingeniería Electrónica." />
+		<meta property="og:image" content="/og-image.jpg" />
+
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://juangonzalez.com.ar/" />
+		<meta property="twitter:title" content="Juan Gonzalez | Ingeniería & Código" />
+		<meta property="twitter:description" content="Portafolio Profesional. Técnico mecánico electricista, desarrollador y estudiante de Ingeniería Electrónica." />
+		<meta property="twitter:image" content="/og-image.jpg" />
+
 	</head>
 	<body class="bg-tech-bg text-gray-300 font-sans antialiased selection:bg-mate-green selection:text-black">
+		<Analytics />
+		<SpeedInsights />
 		<EasterEgg client:idle/>
 		<div class="fixed inset-0 z-[-1] bg-[size:40px_40px] bg-grid-pattern opacity-[0.15] pointer-events-none"></div>
 		<Navbar />
